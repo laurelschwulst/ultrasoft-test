@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>minami is testing something...ultrasoft</title>
+
+  <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color:rgb(174, 174, 174);
+    margin: 7.5px;
+  }
+
+  figure {
+    margin: 0;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* figure:hover {
+    margin: -20px;
+  } */
+
+  /* figure:hover img {
+    transform: scale(200%);
+  } */
+
+  #archives{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 5px;
+  }
+  </style>
+
+
+</head>
+
+<body>
+
+<div id="archives">
+  <figure><img src="image-new/tpapier 1.jpg" /></figure>
+  <figure><img src="image-new/tpapier 2.jpg" /></figure>
+  <figure><img src="image-new/tpapier 3.jpg" /></figure>
+  <figure><img src="image-new/tpapier 4.jpg" /></figure>
+  <figure><img src="image-new/tpapier 5.jpg" /></figure>
+  <figure><img src="image-new/tpapier 6.jpg" /></figure>
+  <figure><img src="image-new/tpapier 7.jpg" /></figure>
+  <figure><img src="image-new/tpapier 8.jpg" /></figure>
+  <figure><img src="image-new/tpapier 9.jpg" /></figure>
+  <figure><img src="image-new/tpapier 10.jpg" /></figure>
+  <figure><img src="image-new/tpapier 11.jpg" /></figure>
+  <figure><img src="image-new/tpapier 12.jpg" /></figure>
+  <figure><img src="image-new/tpapier 13.jpg" /></figure>
+  <figure><img src="image-new/tpapier 14.jpg" /></figure>
+  <figure><img src="image-new/tpapier 15.jpg" /></figure>
+  <figure><img src="image-new/tpapier 16.jpg" /></figure>
+  <figure><img src="image-new/tpapier 17.jpg" /></figure>
+  <figure><img src="image-new/tpapier 18.jpg" /></figure>
+  <figure><img src="image-new/tpapier 19.jpg" /></figure>
+  <figure><img src="image-new/tpapier 20.jpg" /></figure>
+  <figure><img src="image-new/tpapier 21.jpg" /></figure>
+  <figure><img src="image-new/tpapier 23.jpg" /></figure>
+  <figure><img src="image-new/tpapier 25.jpg" /></figure>
+  <figure><img src="image-new/tpapier 26.jpg" /></figure>
+  <figure><img src="image-new/tpapier 27.jpg" /></figure>
+  <figure><img src="image-new/tpapier 28.jpg" /></figure>
+  <figure><img src="image-new/tpapier 29.jpg" /></figure>
+  <figure><img src="image-new/tpapier 30.jpg" /></figure>
+  <figure><img src="image-new/tpapier 31.jpg" /></figure>
+  <figure><img src="image-new/tpapier 32.jpg" /></figure>
+  <figure><img src="image-new/tpapier 33.jpg" /></figure>
+</div>
+
+</body>
+
+<script>
+
+function refreshPage(){
+    window.location.reload();
+} 
+document.addEventListener("DOMContentLoaded", function () {
+    // 画像要素を取得
+    var archives = document.getElementById("archives");
+    var images = archives.getElementsByTagName("img");
+
+    // 画像の順番をランダムに並び替える関数
+    function shuffleImages() {
+        for (var i = images.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = images[i].src;
+            images[i].src = images[j].src;
+            images[j].src = temp;
+        }
+    }
+
+    // ページロード時に画像の順番をランダムに変更
+    shuffleImages();
+});
+
+
+</script>
+
+</html>
